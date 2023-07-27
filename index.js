@@ -8,9 +8,10 @@ const tempPath = "/sys/class/thermal/thermal_zone0/temp"
 
 function getTemperature() {
     let temp = JSON.parse(fs.readFileSync(tempPath, "utf-8"));
+    temp = temp / 1000;
     temp = temp * 9;
     temp = temp / 5;
-    //temp += 32;
+    temp += 32;
     return temp;
 }
 
