@@ -3,7 +3,7 @@ const app = express()
 const fs = require("fs")
 
 
-const port = 226622
+const port = 22662
 const tempPath = "/sys/class/thermal/thermal_zone0/temp"
 
 function getTemperature() {
